@@ -1,7 +1,6 @@
-import express from "express";
-const app = express();
+const app = require("express")();
 
-import errorHandler from "./middleware/errorHandler";
+const errorHandler = require("./middleware/errorHandler");
 
 app.get("/", function(req, res) {
   res.send("Hello World!");
