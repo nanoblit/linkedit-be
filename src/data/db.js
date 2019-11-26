@@ -13,7 +13,7 @@ const getUserByName = username => {
 };
 
 const addUser = async (username, password) => {
-  const [id] = await db("users").insert({ username, password });
+  const [id] = await db("users").insert({ username, password }, "id");
   return getUserById(id);
 };
 
